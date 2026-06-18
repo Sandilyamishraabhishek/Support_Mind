@@ -1,9 +1,9 @@
 import { auth } from '@/auth';
-import { logoutUser } from '@/actions/auth';
+import { LogoutButton } from '@/components/LogoutButton';
 import prisma from '@/lib/prisma';
 import { redirect } from 'next/navigation';
 import { FeedbackForm } from '@/components/FeedbackForm';
-import { Sparkles, LogOut, MessageSquarePlus, Clock, Info, CheckCircle, AlertTriangle, XCircle } from 'lucide-react';
+import { Sparkles, MessageSquarePlus, Clock, Info, CheckCircle, AlertTriangle, XCircle } from 'lucide-react';
 import Link from 'next/link';
 
 export default async function DashboardPage() {
@@ -82,15 +82,7 @@ export default async function DashboardPage() {
               <span className="text-xs text-zinc-500 dark:text-zinc-400">{session.user.email}</span>
             </div>
 
-            <form action={logoutUser}>
-              <button
-                type="submit"
-                className="inline-flex items-center justify-center p-2 rounded-lg text-zinc-500 hover:text-zinc-900 hover:bg-zinc-100 dark:text-zinc-400 dark:hover:text-zinc-50 dark:hover:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 transition-colors shadow-sm cursor-pointer"
-                title="Sign Out"
-              >
-                <LogOut className="w-4 h-4" />
-              </button>
-            </form>
+            <LogoutButton />
           </div>
         </div>
       </header>
