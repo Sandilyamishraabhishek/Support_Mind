@@ -17,7 +17,7 @@ SupportMind is a full-stack, enterprise-grade feedback management system. It ena
 *   **Frontend**: React 19, TypeScript, Tailwind CSS, Lucide Icons, Shadcn UI base tokens.
 *   **Backend**: Next.js 16 Server Actions (secure database operations and API communication).
 *   **Database**: SQLite via Prisma ORM (serverless, zero local service configuration required).
-*   **AI Engine**: Google Gemini API (`gemini-1.5-flash` model for structured JSON categorization, sentiment, and summary, with local rule-based fallback).
+*   **AI Engine**: Google Gemini API and Claude Opus 4.6(`gemini-1.5-flash` model for structured JSON categorization, sentiment, and summary, with local rule-based fallback).
 *   **Authentication & Guarding**: NextAuth.js (v5 Beta) session propagation with Next.js 16 Proxy named exports routing protection.
 
 ---
